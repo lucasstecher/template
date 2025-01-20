@@ -2,11 +2,11 @@
   "name": "template",
   "version": "1.0.0",
   "description": "Simlpe Node template",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "build": "",
-    "start": "",
-    "dev": "",
+    "build": "tsup src --out-dir build",
+    "start": "node build/server.js",
+    "dev": "tsx watch src/server.ts",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "test": "jest"
