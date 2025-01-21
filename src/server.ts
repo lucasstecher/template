@@ -1,9 +1,9 @@
 import { app } from "./app";
-import env from "dotenv/config";
+import { env } from "./env";
 
 app.listen({
-  port: parseInt(process.env.SERVER_PORT || '3333'),
-  host: process.env.SERVER_HOST
+  host: '0.0.0.0',
+  port: env.SERVER_PORT
 }).then(() => {
-  console.log("Server running on port: ", process.env.SERVER_PORT);
+  console.log("Server running on port: ", env.SERVER_PORT);
 });
